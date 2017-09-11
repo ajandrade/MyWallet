@@ -35,6 +35,7 @@
 		E07366F91F67287100F587AC /* AccountDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366F71F67287100F587AC /* AccountDetailCell.swift */; };
 		E07366FA1F67287100F587AC /* AccountDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E07366F81F67287100F587AC /* AccountDetailCell.xib */; };
 		E07366FC1F67287900F587AC /* AccountDetailCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366FB1F67287900F587AC /* AccountDetailCellPresenter.swift */; };
+		E07366FE1F672CA600F587AC /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366FD1F672CA600F587AC /* Date.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		E07366F71F67287100F587AC /* AccountDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailCell.swift; sourceTree = "<group>"; };
 		E07366F81F67287100F587AC /* AccountDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountDetailCell.xib; sourceTree = "<group>"; };
 		E07366FB1F67287900F587AC /* AccountDetailCellPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailCellPresenter.swift; sourceTree = "<group>"; };
+		E07366FD1F672CA600F587AC /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 			children = (
 				E07366E21F6723C900F587AC /* UITableView.swift */,
 				E07366E41F6723DD00F587AC /* UITableViewCell.swift */,
+				E07366FD1F672CA600F587AC /* Date.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				E07366DE1F67232F00F587AC /* AccountCell.swift in Sources */,
 				E07366F51F67283200F587AC /* AccountDetailsPresenter.swift in Sources */,
 				E07366E71F6723EA00F587AC /* Identifiable.swift in Sources */,
+				E07366FE1F672CA600F587AC /* Date.swift in Sources */,
 				E07366F91F67287100F587AC /* AccountDetailCell.swift in Sources */,
 				E07366C91F671DEA00F587AC /* Account.swift in Sources */,
 			);
