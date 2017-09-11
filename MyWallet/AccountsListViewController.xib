@@ -42,7 +42,7 @@
                     </items>
                 </navigationBar>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dIm-Q3-3NY">
-                    <rect key="frame" x="0.0" y="75" width="375" height="592"/>
+                    <rect key="frame" x="0.0" y="80" width="375" height="587"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="3cl-cb-GER"/>
@@ -52,7 +52,7 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="dIm-Q3-3NY" firstAttribute="top" secondItem="MYv-Vd-T0R" secondAttribute="bottom" constant="5" id="3R6-Yw-OL0"/>
+                <constraint firstItem="dIm-Q3-3NY" firstAttribute="top" secondItem="MYv-Vd-T0R" secondAttribute="bottom" constant="10" id="3R6-Yw-OL0"/>
                 <constraint firstItem="MYv-Vd-T0R" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="KeV-8e-bak"/>
                 <constraint firstAttribute="bottom" secondItem="dIm-Q3-3NY" secondAttribute="bottom" id="WiA-8R-25l"/>
                 <constraint firstAttribute="trailing" secondItem="dIm-Q3-3NY" secondAttribute="trailing" id="ovB-ol-l3d"/>

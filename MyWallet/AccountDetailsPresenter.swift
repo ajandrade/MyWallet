@@ -17,6 +17,7 @@ protocol AccountDetailsPresenterRepresentable {
   func cellPresenter(for index: Int) -> AccountDetailCellPresenterRepresentable
   
   func dismiss()
+  func createTransaction()
   
 }
 
@@ -25,6 +26,7 @@ class AccountDetailsPresenter: AccountDetailsPresenterRepresentable {
   // MARK: - DEPENDENCIES
   
   private let navigator: NavigatorRepresentable
+  private let persistanceService: PersistanceServiceRepresentable
   private let account: Account
   
   // MARK: - PRIVATE PROPERTIES
@@ -42,10 +44,13 @@ class AccountDetailsPresenter: AccountDetailsPresenterRepresentable {
     return transactions.count
   }
   
+  var didAddTransaction: (() -> Void)?
+  
   // MARK: - INITIALIZER
   
-  init(navigator: NavigatorRepresentable, account: Account) {
+  init(navigator: NavigatorRepresentable, persistanceService: PersistanceServiceRepresentable, account: Account) {
     self.navigator = navigator
+    self.persistanceService = persistanceService
     self.account = account
     accountName = account.name
     transactions = account.transactions
@@ -68,7 +73,10 @@ class AccountDetailsPresenter: AccountDetailsPresenterRepresentable {
   }
   
   func createTransaction() {
-
+    let createTransactionPresenter = AddNewTransactionPresenter(navigator: navigator, persistanceService: persistanceService, account: account)
+    createTransactionPresenter.didFinishSaving = didAddTransaction
+    let createTransactionViewController = NavigationScene.newTransaction(createTransactionPresenter)
+    navigator.transition(to: createTransactionViewController, type: .modal)
   }
   
 }

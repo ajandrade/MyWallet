@@ -48,7 +48,8 @@ class AccountsListPresenter: AccountsListPresenterRepresentable {
   
   func accountSelected(at index: Int) {
     let account = accounts[index]
-    let detailsPresenter = AccountDetailsPresenter(navigator: navigator, account: account)
+    let detailsPresenter = AccountDetailsPresenter(navigator: navigator, persistanceService: persistanceService, account: account)
+    detailsPresenter.didAddTransaction = { [weak self] _ in self?.updateModels() }
     let detailsViewController = NavigationScene.accountDetails(detailsPresenter)
     navigator.transition(to: detailsViewController, type: .push)
   }

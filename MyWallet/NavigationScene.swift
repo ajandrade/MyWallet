@@ -12,6 +12,7 @@ enum NavigationScene {
   case accountsList(AccountsListPresenterRepresentable)
   case newAccount(AddNewAccountPresenterRepresentable)
   case accountDetails(AccountDetailsPresenterRepresentable)
+  case newTransaction(AddNewTransactionPresenterRepresentable)
 }
 
 extension NavigationScene {
@@ -30,7 +31,10 @@ extension NavigationScene {
       let accountsViewController = AccountDetailsViewController()
       accountsViewController.presenter = presenter
       return accountsViewController
-
+    case .newTransaction(let presenter):
+      let newTransactionViewController = AddNewTransactionViewController()
+      newTransactionViewController.presenter = presenter
+      return newTransactionViewController
     }
   }
   

@@ -39,7 +39,7 @@ class AccountDetailsViewController: UIViewController {
   }
   
   @IBAction func createTransaction(_ sender: UIBarButtonItem) {
-    
+    presenter.createTransaction()
   }
   
 }

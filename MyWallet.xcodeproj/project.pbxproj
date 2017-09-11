@@ -37,6 +37,9 @@
 		E07366FC1F67287900F587AC /* AccountDetailCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366FB1F67287900F587AC /* AccountDetailCellPresenter.swift */; };
 		E07366FE1F672CA600F587AC /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366FD1F672CA600F587AC /* Date.swift */; };
 		E07367001F67390000F587AC /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366FF1F67390000F587AC /* String.swift */; };
+		E07367041F6739AA00F587AC /* AddNewTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07367021F6739AA00F587AC /* AddNewTransactionViewController.swift */; };
+		E07367051F6739AA00F587AC /* AddNewTransactionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E07367031F6739AA00F587AC /* AddNewTransactionViewController.xib */; };
+		E07367071F6739B500F587AC /* AddNewTransactionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07367061F6739B500F587AC /* AddNewTransactionPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +75,9 @@
 		E07366FB1F67287900F587AC /* AccountDetailCellPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailCellPresenter.swift; sourceTree = "<group>"; };
 		E07366FD1F672CA600F587AC /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		E07366FF1F67390000F587AC /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		E07367021F6739AA00F587AC /* AddNewTransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewTransactionViewController.swift; sourceTree = "<group>"; };
+		E07367031F6739AA00F587AC /* AddNewTransactionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddNewTransactionViewController.xib; sourceTree = "<group>"; };
+		E07367061F6739B500F587AC /* AddNewTransactionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewTransactionPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +156,7 @@
 				E07366CE1F671FFC00F587AC /* AccountsList */,
 				E07366E81F6725D400F587AC /* AddNewAccount */,
 				E07366EF1F6727E200F587AC /* AccountDetails */,
+				E07367011F67398F00F587AC /* AddNewTransaction */,
 			);
 			name = Context;
 			sourceTree = "<group>";
@@ -235,6 +242,16 @@
 			name = Cell;
 			sourceTree = "<group>";
 		};
+		E07367011F67398F00F587AC /* AddNewTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				E07367021F6739AA00F587AC /* AddNewTransactionViewController.swift */,
+				E07367031F6739AA00F587AC /* AddNewTransactionViewController.xib */,
+				E07367061F6739B500F587AC /* AddNewTransactionPresenter.swift */,
+			);
+			name = AddNewTransaction;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -299,6 +316,7 @@
 				E07366EC1F6725EE00F587AC /* AddNewAccountViewController.xib in Resources */,
 				E07366F31F67281F00F587AC /* AccountDetailsViewController.xib in Resources */,
 				E07366FA1F67287100F587AC /* AccountDetailCell.xib in Resources */,
+				E07367051F6739AA00F587AC /* AddNewTransactionViewController.xib in Resources */,
 				E07366DF1F67232F00F587AC /* AccountCell.xib in Resources */,
 				E07366B31F671CA100F587AC /* Assets.xcassets in Resources */,
 				E07366D21F67201400F587AC /* AccountsListViewController.xib in Resources */,
@@ -328,10 +346,12 @@
 				E07366F21F67281F00F587AC /* AccountDetailsViewController.swift in Sources */,
 				E07366AC1F671CA100F587AC /* AppDelegate.swift in Sources */,
 				E07366D61F67206F00F587AC /* NavigationTransitionType.swift in Sources */,
+				E07367041F6739AA00F587AC /* AddNewTransactionViewController.swift in Sources */,
 				E07366E31F6723C900F587AC /* UITableView.swift in Sources */,
 				E07366DE1F67232F00F587AC /* AccountCell.swift in Sources */,
 				E07366F51F67283200F587AC /* AccountDetailsPresenter.swift in Sources */,
 				E07366E71F6723EA00F587AC /* Identifiable.swift in Sources */,
+				E07367071F6739B500F587AC /* AddNewTransactionPresenter.swift in Sources */,
 				E07366FE1F672CA600F587AC /* Date.swift in Sources */,
 				E07366F91F67287100F587AC /* AccountDetailCell.swift in Sources */,
 				E07366C91F671DEA00F587AC /* Account.swift in Sources */,
