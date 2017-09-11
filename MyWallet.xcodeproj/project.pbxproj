@@ -36,6 +36,7 @@
 		E07366FA1F67287100F587AC /* AccountDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E07366F81F67287100F587AC /* AccountDetailCell.xib */; };
 		E07366FC1F67287900F587AC /* AccountDetailCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366FB1F67287900F587AC /* AccountDetailCellPresenter.swift */; };
 		E07366FE1F672CA600F587AC /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366FD1F672CA600F587AC /* Date.swift */; };
+		E07367001F67390000F587AC /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366FF1F67390000F587AC /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		E07366F81F67287100F587AC /* AccountDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountDetailCell.xib; sourceTree = "<group>"; };
 		E07366FB1F67287900F587AC /* AccountDetailCellPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailCellPresenter.swift; sourceTree = "<group>"; };
 		E07366FD1F672CA600F587AC /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		E07366FF1F67390000F587AC /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				E07366E21F6723C900F587AC /* UITableView.swift */,
 				E07366E41F6723DD00F587AC /* UITableViewCell.swift */,
 				E07366FD1F672CA600F587AC /* Date.swift */,
+				E07366FF1F67390000F587AC /* String.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 			files = (
 				E07366D11F67201400F587AC /* AccountsListViewController.swift in Sources */,
 				E07366EB1F6725EE00F587AC /* AddNewAccountViewController.swift in Sources */,
+				E07367001F67390000F587AC /* String.swift in Sources */,
 				E07366FC1F67287900F587AC /* AccountDetailCellPresenter.swift in Sources */,
 				E07366DA1F67213100F587AC /* Navigator.swift in Sources */,
 				E07366E11F67233900F587AC /* AccountCellPresenter.swift in Sources */,

@@ -28,7 +28,7 @@ struct AccountCellPresenter: AccountCellPresenterRepresentable {
   
   init(account: Account) {
     accountName = account.name
-    accountNumber = account.number
+    accountNumber = account.number.accountNumberFormatting
     accountBalance = "$ \(account.balance)"
     bankName = account.bank
   }

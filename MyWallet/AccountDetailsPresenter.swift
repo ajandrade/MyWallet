@@ -50,7 +50,7 @@ class AccountDetailsPresenter: AccountDetailsPresenterRepresentable {
     accountName = account.name
     transactions = account.transactions
     accountBalance = "$ \(account.balance)"
-    accountNumber = account.number
+    accountNumber = account.number.accountNumberFormatting
     transactionPresenters = transactions.map(AccountDetailCellPresenter.init(transaction:))
   }
   
