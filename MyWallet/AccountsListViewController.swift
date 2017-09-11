@@ -45,7 +45,7 @@ extension AccountsListViewController: UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueCell(for: indexPath) as AccountCell
-    let cellPresenter = presenter.getPresenter(for: indexPath.row)
+    let cellPresenter = presenter.cellPresenter(for: indexPath.row)
     cell.configure(with: cellPresenter)
     return cell
   }

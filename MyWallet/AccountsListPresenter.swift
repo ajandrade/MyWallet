@@ -12,7 +12,7 @@ protocol AccountsListPresenterRepresentable {
   var accountsChanged: (()-> Void)? { get set }
   var accountsNumber: Int { get }
   
-  func getPresenter(for index: Int) -> AccountCellPresenterRepresentable
+  func cellPresenter(for index: Int) -> AccountCellPresenterRepresentable
   
   func accountSelected(at index: Int)
   func createAccountPressed()
@@ -47,7 +47,10 @@ class AccountsListPresenter: AccountsListPresenterRepresentable {
   // MARK: - NAVIGATION
   
   func accountSelected(at index: Int) {
-    // TODO: - perform navigation
+    let account = accounts[index]
+    let detailsPresenter = AccountDetailsPresenter(navigator: navigator, account: account)
+    let detailsViewController = NavigationScene.accountDetails(detailsPresenter)
+    navigator.transition(to: detailsViewController, type: .push)
   }
   
   func createAccountPressed() {
@@ -65,7 +68,7 @@ class AccountsListPresenter: AccountsListPresenterRepresentable {
     accountsChanged?()
   }
   
-  func getPresenter(for index: Int) -> AccountCellPresenterRepresentable {
+  func cellPresenter(for index: Int) -> AccountCellPresenterRepresentable {
     let presenter = accountPresenters[index]
     return presenter
   }

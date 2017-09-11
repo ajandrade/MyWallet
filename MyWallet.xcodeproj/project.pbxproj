@@ -29,6 +29,12 @@
 		E07366EB1F6725EE00F587AC /* AddNewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366E91F6725EE00F587AC /* AddNewAccountViewController.swift */; };
 		E07366EC1F6725EE00F587AC /* AddNewAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E07366EA1F6725EE00F587AC /* AddNewAccountViewController.xib */; };
 		E07366EE1F6725FA00F587AC /* AddNewAccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366ED1F6725FA00F587AC /* AddNewAccountPresenter.swift */; };
+		E07366F21F67281F00F587AC /* AccountDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366F01F67281F00F587AC /* AccountDetailsViewController.swift */; };
+		E07366F31F67281F00F587AC /* AccountDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E07366F11F67281F00F587AC /* AccountDetailsViewController.xib */; };
+		E07366F51F67283200F587AC /* AccountDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366F41F67283200F587AC /* AccountDetailsPresenter.swift */; };
+		E07366F91F67287100F587AC /* AccountDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366F71F67287100F587AC /* AccountDetailCell.swift */; };
+		E07366FA1F67287100F587AC /* AccountDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E07366F81F67287100F587AC /* AccountDetailCell.xib */; };
+		E07366FC1F67287900F587AC /* AccountDetailCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366FB1F67287900F587AC /* AccountDetailCellPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +62,12 @@
 		E07366E91F6725EE00F587AC /* AddNewAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewAccountViewController.swift; sourceTree = "<group>"; };
 		E07366EA1F6725EE00F587AC /* AddNewAccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddNewAccountViewController.xib; sourceTree = "<group>"; };
 		E07366ED1F6725FA00F587AC /* AddNewAccountPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewAccountPresenter.swift; sourceTree = "<group>"; };
+		E07366F01F67281F00F587AC /* AccountDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailsViewController.swift; sourceTree = "<group>"; };
+		E07366F11F67281F00F587AC /* AccountDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountDetailsViewController.xib; sourceTree = "<group>"; };
+		E07366F41F67283200F587AC /* AccountDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailsPresenter.swift; sourceTree = "<group>"; };
+		E07366F71F67287100F587AC /* AccountDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailCell.swift; sourceTree = "<group>"; };
+		E07366F81F67287100F587AC /* AccountDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountDetailCell.xib; sourceTree = "<group>"; };
+		E07366FB1F67287900F587AC /* AccountDetailCellPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailCellPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +143,7 @@
 				E07366AB1F671CA100F587AC /* AppDelegate.swift */,
 				E07366CE1F671FFC00F587AC /* AccountsList */,
 				E07366E81F6725D400F587AC /* AddNewAccount */,
+				E07366EF1F6727E200F587AC /* AccountDetails */,
 			);
 			name = Context;
 			sourceTree = "<group>";
@@ -195,6 +208,27 @@
 			name = AddNewAccount;
 			sourceTree = "<group>";
 		};
+		E07366EF1F6727E200F587AC /* AccountDetails */ = {
+			isa = PBXGroup;
+			children = (
+				E07366F61F67285D00F587AC /* Cell */,
+				E07366F01F67281F00F587AC /* AccountDetailsViewController.swift */,
+				E07366F11F67281F00F587AC /* AccountDetailsViewController.xib */,
+				E07366F41F67283200F587AC /* AccountDetailsPresenter.swift */,
+			);
+			name = AccountDetails;
+			sourceTree = "<group>";
+		};
+		E07366F61F67285D00F587AC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E07366F71F67287100F587AC /* AccountDetailCell.swift */,
+				E07366F81F67287100F587AC /* AccountDetailCell.xib */,
+				E07366FB1F67287900F587AC /* AccountDetailCellPresenter.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -257,6 +291,8 @@
 			files = (
 				E07366BE1F671D5000F587AC /* Launch Screen.storyboard in Resources */,
 				E07366EC1F6725EE00F587AC /* AddNewAccountViewController.xib in Resources */,
+				E07366F31F67281F00F587AC /* AccountDetailsViewController.xib in Resources */,
+				E07366FA1F67287100F587AC /* AccountDetailCell.xib in Resources */,
 				E07366DF1F67232F00F587AC /* AccountCell.xib in Resources */,
 				E07366B31F671CA100F587AC /* Assets.xcassets in Resources */,
 				E07366D21F67201400F587AC /* AccountsListViewController.xib in Resources */,
@@ -272,6 +308,7 @@
 			files = (
 				E07366D11F67201400F587AC /* AccountsListViewController.swift in Sources */,
 				E07366EB1F6725EE00F587AC /* AddNewAccountViewController.swift in Sources */,
+				E07366FC1F67287900F587AC /* AccountDetailCellPresenter.swift in Sources */,
 				E07366DA1F67213100F587AC /* Navigator.swift in Sources */,
 				E07366E11F67233900F587AC /* AccountCellPresenter.swift in Sources */,
 				E07366D81F67208000F587AC /* NavigationScene.swift in Sources */,
@@ -281,11 +318,14 @@
 				E07366EE1F6725FA00F587AC /* AddNewAccountPresenter.swift in Sources */,
 				E07366CB1F671E0200F587AC /* PersistanceService.swift in Sources */,
 				E07366D41F67202000F587AC /* AccountsListPresenter.swift in Sources */,
+				E07366F21F67281F00F587AC /* AccountDetailsViewController.swift in Sources */,
 				E07366AC1F671CA100F587AC /* AppDelegate.swift in Sources */,
 				E07366D61F67206F00F587AC /* NavigationTransitionType.swift in Sources */,
 				E07366E31F6723C900F587AC /* UITableView.swift in Sources */,
 				E07366DE1F67232F00F587AC /* AccountCell.swift in Sources */,
+				E07366F51F67283200F587AC /* AccountDetailsPresenter.swift in Sources */,
 				E07366E71F6723EA00F587AC /* Identifiable.swift in Sources */,
+				E07366F91F67287100F587AC /* AccountDetailCell.swift in Sources */,
 				E07366C91F671DEA00F587AC /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
