@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+protocol AccountsListPresenterRepresentable { }
+
+class AccountsListPresenter: AccountsListPresenterRepresentable { }

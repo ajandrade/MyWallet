@@ -17,6 +17,9 @@
 		E07366D11F67201400F587AC /* AccountsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366CF1F67201400F587AC /* AccountsListViewController.swift */; };
 		E07366D21F67201400F587AC /* AccountsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E07366D01F67201400F587AC /* AccountsListViewController.xib */; };
 		E07366D41F67202000F587AC /* AccountsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366D31F67202000F587AC /* AccountsListPresenter.swift */; };
+		E07366D61F67206F00F587AC /* NavigationTransitionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366D51F67206F00F587AC /* NavigationTransitionType.swift */; };
+		E07366D81F67208000F587AC /* NavigationScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366D71F67208000F587AC /* NavigationScene.swift */; };
+		E07366DA1F67213100F587AC /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366D91F67213100F587AC /* Navigator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		E07366CF1F67201400F587AC /* AccountsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsListViewController.swift; sourceTree = "<group>"; };
 		E07366D01F67201400F587AC /* AccountsListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountsListViewController.xib; sourceTree = "<group>"; };
 		E07366D31F67202000F587AC /* AccountsListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsListPresenter.swift; sourceTree = "<group>"; };
+		E07366D51F67206F00F587AC /* NavigationTransitionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationTransitionType.swift; sourceTree = "<group>"; };
+		E07366D71F67208000F587AC /* NavigationScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationScene.swift; sourceTree = "<group>"; };
+		E07366D91F67213100F587AC /* Navigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +73,8 @@
 				E07366BF1F671D6000F587AC /* Protocols */,
 				E07366C01F671D6700F587AC /* Extensions */,
 				E07366C11F671D6D00F587AC /* Services */,
-				E07366C31F671D7800F587AC /* Navigation */,
 				E07366C21F671D7100F587AC /* Context */,
+				E07366C31F671D7800F587AC /* Navigation */,
 				E07366C41F671D7D00F587AC /* Models */,
 				E07366C51F671D8300F587AC /* Resources */,
 			);
@@ -110,6 +116,9 @@
 		E07366C31F671D7800F587AC /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				E07366D91F67213100F587AC /* Navigator.swift */,
+				E07366D71F67208000F587AC /* NavigationScene.swift */,
+				E07366D51F67206F00F587AC /* NavigationTransitionType.swift */,
 			);
 			name = Navigation;
 			sourceTree = "<group>";
@@ -217,11 +226,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E07366D11F67201400F587AC /* AccountsListViewController.swift in Sources */,
+				E07366DA1F67213100F587AC /* Navigator.swift in Sources */,
+				E07366D81F67208000F587AC /* NavigationScene.swift in Sources */,
 				E07366CD1F671E3900F587AC /* PlistRepresentable.swift in Sources */,
 				E07366C71F671DD600F587AC /* Transaction.swift in Sources */,
 				E07366CB1F671E0200F587AC /* PersistanceService.swift in Sources */,
 				E07366D41F67202000F587AC /* AccountsListPresenter.swift in Sources */,
 				E07366AC1F671CA100F587AC /* AppDelegate.swift in Sources */,
+				E07366D61F67206F00F587AC /* NavigationTransitionType.swift in Sources */,
 				E07366C91F671DEA00F587AC /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
