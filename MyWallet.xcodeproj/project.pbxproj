@@ -20,6 +20,12 @@
 		E07366D61F67206F00F587AC /* NavigationTransitionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366D51F67206F00F587AC /* NavigationTransitionType.swift */; };
 		E07366D81F67208000F587AC /* NavigationScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366D71F67208000F587AC /* NavigationScene.swift */; };
 		E07366DA1F67213100F587AC /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366D91F67213100F587AC /* Navigator.swift */; };
+		E07366DE1F67232F00F587AC /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366DC1F67232F00F587AC /* AccountCell.swift */; };
+		E07366DF1F67232F00F587AC /* AccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E07366DD1F67232F00F587AC /* AccountCell.xib */; };
+		E07366E11F67233900F587AC /* AccountCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366E01F67233900F587AC /* AccountCellPresenter.swift */; };
+		E07366E31F6723C900F587AC /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366E21F6723C900F587AC /* UITableView.swift */; };
+		E07366E51F6723DD00F587AC /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366E41F6723DD00F587AC /* UITableViewCell.swift */; };
+		E07366E71F6723EA00F587AC /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366E61F6723EA00F587AC /* Identifiable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +44,12 @@
 		E07366D51F67206F00F587AC /* NavigationTransitionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationTransitionType.swift; sourceTree = "<group>"; };
 		E07366D71F67208000F587AC /* NavigationScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationScene.swift; sourceTree = "<group>"; };
 		E07366D91F67213100F587AC /* Navigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		E07366DC1F67232F00F587AC /* AccountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
+		E07366DD1F67232F00F587AC /* AccountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountCell.xib; sourceTree = "<group>"; };
+		E07366E01F67233900F587AC /* AccountCellPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCellPresenter.swift; sourceTree = "<group>"; };
+		E07366E21F6723C900F587AC /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		E07366E41F6723DD00F587AC /* UITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		E07366E61F6723EA00F587AC /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				E07366CC1F671E3900F587AC /* PlistRepresentable.swift */,
+				E07366E61F6723EA00F587AC /* Identifiable.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -92,6 +105,8 @@
 		E07366C01F671D6700F587AC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E07366E21F6723C900F587AC /* UITableView.swift */,
+				E07366E41F6723DD00F587AC /* UITableViewCell.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -145,11 +160,22 @@
 		E07366CE1F671FFC00F587AC /* AccountsList */ = {
 			isa = PBXGroup;
 			children = (
+				E07366DB1F67231700F587AC /* Cells */,
 				E07366CF1F67201400F587AC /* AccountsListViewController.swift */,
 				E07366D01F67201400F587AC /* AccountsListViewController.xib */,
 				E07366D31F67202000F587AC /* AccountsListPresenter.swift */,
 			);
 			name = AccountsList;
+			sourceTree = "<group>";
+		};
+		E07366DB1F67231700F587AC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E07366DC1F67232F00F587AC /* AccountCell.swift */,
+				E07366DD1F67232F00F587AC /* AccountCell.xib */,
+				E07366E01F67233900F587AC /* AccountCellPresenter.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E07366BE1F671D5000F587AC /* Launch Screen.storyboard in Resources */,
+				E07366DF1F67232F00F587AC /* AccountCell.xib in Resources */,
 				E07366B31F671CA100F587AC /* Assets.xcassets in Resources */,
 				E07366D21F67201400F587AC /* AccountsListViewController.xib in Resources */,
 			);
@@ -227,13 +254,18 @@
 			files = (
 				E07366D11F67201400F587AC /* AccountsListViewController.swift in Sources */,
 				E07366DA1F67213100F587AC /* Navigator.swift in Sources */,
+				E07366E11F67233900F587AC /* AccountCellPresenter.swift in Sources */,
 				E07366D81F67208000F587AC /* NavigationScene.swift in Sources */,
 				E07366CD1F671E3900F587AC /* PlistRepresentable.swift in Sources */,
+				E07366E51F6723DD00F587AC /* UITableViewCell.swift in Sources */,
 				E07366C71F671DD600F587AC /* Transaction.swift in Sources */,
 				E07366CB1F671E0200F587AC /* PersistanceService.swift in Sources */,
 				E07366D41F67202000F587AC /* AccountsListPresenter.swift in Sources */,
 				E07366AC1F671CA100F587AC /* AppDelegate.swift in Sources */,
 				E07366D61F67206F00F587AC /* NavigationTransitionType.swift in Sources */,
+				E07366E31F6723C900F587AC /* UITableView.swift in Sources */,
+				E07366DE1F67232F00F587AC /* AccountCell.swift in Sources */,
+				E07366E71F6723EA00F587AC /* Identifiable.swift in Sources */,
 				E07366C91F671DEA00F587AC /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
