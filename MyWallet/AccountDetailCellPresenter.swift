@@ -29,7 +29,7 @@ struct AccountDetailCellPresenter: AccountDetailCellPresenterRepresentable {
   init(transaction: Transaction) {
     descriptionImageName = transaction.category.imageName
     date = "\(transaction.date.mediumFormattingStyle)"
-    value = "$ \(transaction.amount)"
+    value = (transaction.category == .income) ? "+ $ \(transaction.amount)" : "- $ \(transaction.amount)"
     description = transaction.description
   }
   
