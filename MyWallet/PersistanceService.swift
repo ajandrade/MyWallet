@@ -9,9 +9,8 @@
 import Foundation
 
 protocol PersistanceServiceRepresentable {
-  associatedtype T
-  func save(_ items: [T])
-  func fetchAccounts() -> [T]
+  func save(_ items: [Account])
+  func fetchAccounts() -> [Account]
 }
 
 class PersistanceService {
@@ -46,7 +45,7 @@ class PersistanceService {
 }
 
 extension PersistanceService: PersistanceServiceRepresentable {
-  
+
   func save(_ accounts: [Account]) {
     let accountsPlist = accounts.map { $0.plistRepresentation } as NSArray
     accountsPlist.write(to: accountsFileURL, atomically: true)

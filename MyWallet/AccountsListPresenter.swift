@@ -10,4 +10,18 @@ import Foundation
 
 protocol AccountsListPresenterRepresentable { }
 
-class AccountsListPresenter: AccountsListPresenterRepresentable { }
+class AccountsListPresenter: AccountsListPresenterRepresentable {
+  
+  // MARK: - DEPENDENCIES
+  
+  private let persistanceService: PersistanceServiceRepresentable
+  private let navigator: NavigatorRepresentable
+
+  // MARK: - INITIALIZER
+  
+  init(persistanceService: PersistanceServiceRepresentable, navigator: NavigatorRepresentable) {
+    self.persistanceService = persistanceService
+    self.navigator = navigator
+  }
+
+}
