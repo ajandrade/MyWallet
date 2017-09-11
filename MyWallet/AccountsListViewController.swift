@@ -24,12 +24,15 @@ class AccountsListViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    presenter.accountsChanged = { [weak self] _ in
+      self?.tableView.reloadData()
+    }
   }
   
   // MARK: - IBACTIONS
   
   @IBAction func createNewAccount(_ sender: UIBarButtonItem) {
-
+    presenter.createAccountPressed()
   }
   
 }

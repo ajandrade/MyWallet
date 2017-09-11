@@ -9,6 +9,7 @@
 import Foundation
 
 protocol AccountsListPresenterRepresentable {
+  var accountsChanged: (()-> Void)? { get set }
   var accountsNumber: Int { get }
   
   func getPresenter(for index: Int) -> AccountCellPresenterRepresentable
@@ -31,6 +32,7 @@ class AccountsListPresenter: AccountsListPresenterRepresentable {
   
   // MARK: - OUTPUT PROPERTIES
   
+  var accountsChanged: (()-> Void)?
   var accountsNumber: Int { return accounts.count }
 
   // MARK: - INITIALIZER
@@ -49,10 +51,19 @@ class AccountsListPresenter: AccountsListPresenterRepresentable {
   }
   
   func createAccountPressed() {
-    // TODO: - perform navigation
+    let createAccountPresenter = AddNewAccountPresenter(navigator: navigator, persistanceService: persistanceService)
+    createAccountPresenter.didFinishSaving = { [weak self] _ in self?.updateModels() }
+    let createAccountViewController = NavigationScene.newAccount(createAccountPresenter)
+    navigator.transition(to: createAccountViewController, type: .modal)
   }
   
   // MARK: - METHODS
+  
+  private func updateModels() {
+    accounts = persistanceService.fetchAccounts()
+    accountPresenters = accounts.map(AccountCellPresenter.init(account:))
+    accountsChanged?()
+  }
   
   func getPresenter(for index: Int) -> AccountCellPresenterRepresentable {
     let presenter = accountPresenters[index]

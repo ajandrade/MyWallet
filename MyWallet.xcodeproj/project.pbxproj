@@ -26,6 +26,9 @@
 		E07366E31F6723C900F587AC /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366E21F6723C900F587AC /* UITableView.swift */; };
 		E07366E51F6723DD00F587AC /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366E41F6723DD00F587AC /* UITableViewCell.swift */; };
 		E07366E71F6723EA00F587AC /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366E61F6723EA00F587AC /* Identifiable.swift */; };
+		E07366EB1F6725EE00F587AC /* AddNewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366E91F6725EE00F587AC /* AddNewAccountViewController.swift */; };
+		E07366EC1F6725EE00F587AC /* AddNewAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E07366EA1F6725EE00F587AC /* AddNewAccountViewController.xib */; };
+		E07366EE1F6725FA00F587AC /* AddNewAccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366ED1F6725FA00F587AC /* AddNewAccountPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		E07366E21F6723C900F587AC /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		E07366E41F6723DD00F587AC /* UITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 		E07366E61F6723EA00F587AC /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
+		E07366E91F6725EE00F587AC /* AddNewAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewAccountViewController.swift; sourceTree = "<group>"; };
+		E07366EA1F6725EE00F587AC /* AddNewAccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddNewAccountViewController.xib; sourceTree = "<group>"; };
+		E07366ED1F6725FA00F587AC /* AddNewAccountPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewAccountPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +130,7 @@
 			children = (
 				E07366AB1F671CA100F587AC /* AppDelegate.swift */,
 				E07366CE1F671FFC00F587AC /* AccountsList */,
+				E07366E81F6725D400F587AC /* AddNewAccount */,
 			);
 			name = Context;
 			sourceTree = "<group>";
@@ -176,6 +183,16 @@
 				E07366E01F67233900F587AC /* AccountCellPresenter.swift */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		E07366E81F6725D400F587AC /* AddNewAccount */ = {
+			isa = PBXGroup;
+			children = (
+				E07366E91F6725EE00F587AC /* AddNewAccountViewController.swift */,
+				E07366EA1F6725EE00F587AC /* AddNewAccountViewController.xib */,
+				E07366ED1F6725FA00F587AC /* AddNewAccountPresenter.swift */,
+			);
+			name = AddNewAccount;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E07366BE1F671D5000F587AC /* Launch Screen.storyboard in Resources */,
+				E07366EC1F6725EE00F587AC /* AddNewAccountViewController.xib in Resources */,
 				E07366DF1F67232F00F587AC /* AccountCell.xib in Resources */,
 				E07366B31F671CA100F587AC /* Assets.xcassets in Resources */,
 				E07366D21F67201400F587AC /* AccountsListViewController.xib in Resources */,
@@ -253,12 +271,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E07366D11F67201400F587AC /* AccountsListViewController.swift in Sources */,
+				E07366EB1F6725EE00F587AC /* AddNewAccountViewController.swift in Sources */,
 				E07366DA1F67213100F587AC /* Navigator.swift in Sources */,
 				E07366E11F67233900F587AC /* AccountCellPresenter.swift in Sources */,
 				E07366D81F67208000F587AC /* NavigationScene.swift in Sources */,
 				E07366CD1F671E3900F587AC /* PlistRepresentable.swift in Sources */,
 				E07366E51F6723DD00F587AC /* UITableViewCell.swift in Sources */,
 				E07366C71F671DD600F587AC /* Transaction.swift in Sources */,
+				E07366EE1F6725FA00F587AC /* AddNewAccountPresenter.swift in Sources */,
 				E07366CB1F671E0200F587AC /* PersistanceService.swift in Sources */,
 				E07366D41F67202000F587AC /* AccountsListPresenter.swift in Sources */,
 				E07366AC1F671CA100F587AC /* AppDelegate.swift in Sources */,

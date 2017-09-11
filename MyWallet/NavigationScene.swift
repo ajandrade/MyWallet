@@ -10,6 +10,7 @@ import UIKit
 
 enum NavigationScene {
   case accountsList(AccountsListPresenterRepresentable)
+  case newAccount(AddNewAccountPresenterRepresentable)
 }
 
 extension NavigationScene {
@@ -20,6 +21,10 @@ extension NavigationScene {
       let accountsViewController = AccountsListViewController()
       accountsViewController.presenter = presenter
       return accountsViewController
+    case .newAccount(let presenter):
+      let newAccountViewController = AddNewAccountViewController()
+      newAccountViewController.presenter = presenter
+      return newAccountViewController
     }
   }
   
