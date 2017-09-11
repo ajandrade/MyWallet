@@ -10,6 +10,10 @@
 		E07366AC1F671CA100F587AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366AB1F671CA100F587AC /* AppDelegate.swift */; };
 		E07366B31F671CA100F587AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E07366B21F671CA100F587AC /* Assets.xcassets */; };
 		E07366BE1F671D5000F587AC /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E07366BD1F671D5000F587AC /* Launch Screen.storyboard */; };
+		E07366C71F671DD600F587AC /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366C61F671DD600F587AC /* Transaction.swift */; };
+		E07366C91F671DEA00F587AC /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366C81F671DEA00F587AC /* Account.swift */; };
+		E07366CB1F671E0200F587AC /* PersistanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366CA1F671E0200F587AC /* PersistanceService.swift */; };
+		E07366CD1F671E3900F587AC /* PlistRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07366CC1F671E3900F587AC /* PlistRepresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +22,10 @@
 		E07366B21F671CA100F587AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E07366B71F671CA100F587AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E07366BD1F671D5000F587AC /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		E07366C61F671DD600F587AC /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		E07366C81F671DEA00F587AC /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		E07366CA1F671E0200F587AC /* PersistanceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistanceService.swift; sourceTree = "<group>"; };
+		E07366CC1F671E3900F587AC /* PlistRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlistRepresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +73,7 @@
 		E07366BF1F671D6000F587AC /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				E07366CC1F671E3900F587AC /* PlistRepresentable.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -79,6 +88,7 @@
 		E07366C11F671D6D00F587AC /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E07366CA1F671E0200F587AC /* PersistanceService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -100,6 +110,8 @@
 		E07366C41F671D7D00F587AC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E07366C61F671DD600F587AC /* Transaction.swift */,
+				E07366C81F671DEA00F587AC /* Account.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -186,7 +198,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E07366CD1F671E3900F587AC /* PlistRepresentable.swift in Sources */,
+				E07366C71F671DD600F587AC /* Transaction.swift in Sources */,
+				E07366CB1F671E0200F587AC /* PersistanceService.swift in Sources */,
 				E07366AC1F671CA100F587AC /* AppDelegate.swift in Sources */,
+				E07366C91F671DEA00F587AC /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
