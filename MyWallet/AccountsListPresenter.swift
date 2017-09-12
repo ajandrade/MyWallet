@@ -56,7 +56,7 @@ class AccountsListPresenter: AccountsListPresenterRepresentable {
   
   func createAccountPressed() {
     let createAccountPresenter = AddNewAccountPresenter(navigator: navigator, persistanceService: persistanceService)
-    createAccountPresenter.didFinishSaving = { [weak self] _ in self?.updateModels() }
+    createAccountPresenter.didAddAccount = { [weak self] _ in self?.updateModels() }
     let createAccountViewController = NavigationScene.newAccount(createAccountPresenter)
     navigator.transition(to: createAccountViewController, type: .modal)
   }

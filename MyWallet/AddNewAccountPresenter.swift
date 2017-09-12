@@ -22,7 +22,7 @@ class AddNewAccountPresenter: AddNewAccountPresenterRepresentable {
   
   // MARK: - OUTPUT PROPERTIES
   
-  var didFinishSaving: (()-> Void)?
+  var didAddAccount: (()-> Void)?
   
   // MARK: - INITIALIZER
   
@@ -38,7 +38,7 @@ class AddNewAccountPresenter: AddNewAccountPresenterRepresentable {
     let newAccount = Account(name: accountName, bank: bankName, number: accountNumber, transactions: [])
     accounts.append(newAccount)
     persistanceService.save(accounts)
-    didFinishSaving?()
+    didAddAccount?()
     dismiss()
   }
   

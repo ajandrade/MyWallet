@@ -57,6 +57,7 @@ class AddNewTransactionViewController: UIViewController {
 
   @IBAction func savePressed(_ sender: UIBarButtonItem) {
     guard let value = valueTextField.text, value != "", let description = descriptionTextField.text, description != "" else { return }
+    view.endEditing(true)
     presenter.save(amount: value, description: description)
   }
   
@@ -67,46 +68,46 @@ class AddNewTransactionViewController: UIViewController {
     switch type {
     case .income:
       incomeButton.alpha = 1.0
-      groceriesButton.alpha = 0.5
-      utilitiesButton.alpha = 0.5
-      homeButton.alpha = 0.5
-      transportButton.alpha = 0.5
-      funButton.alpha = 0.5
+      groceriesButton.alpha = 0.3
+      utilitiesButton.alpha = 0.3
+      homeButton.alpha = 0.3
+      transportButton.alpha = 0.3
+      funButton.alpha = 0.3
     case .groceries:
       groceriesButton.alpha = 1.0
-      incomeButton.alpha = 0.5
-      utilitiesButton.alpha = 0.5
-      homeButton.alpha = 0.5
-      transportButton.alpha = 0.5
-      funButton.alpha = 0.5
+      incomeButton.alpha = 0.3
+      utilitiesButton.alpha = 0.3
+      homeButton.alpha = 0.3
+      transportButton.alpha = 0.3
+      funButton.alpha = 0.3
     case .fun:
       funButton.alpha = 1.0
-      groceriesButton.alpha = 0.5
-      utilitiesButton.alpha = 0.5
-      homeButton.alpha = 0.5
-      transportButton.alpha = 0.5
-      incomeButton.alpha = 0.5
+      groceriesButton.alpha = 0.3
+      utilitiesButton.alpha = 0.3
+      homeButton.alpha = 0.3
+      transportButton.alpha = 0.3
+      incomeButton.alpha = 0.3
     case .home:
       homeButton.alpha = 1.0
-      groceriesButton.alpha = 0.5
-      utilitiesButton.alpha = 0.5
-      incomeButton.alpha = 0.5
-      transportButton.alpha = 0.5
-      funButton.alpha = 0.5
+      groceriesButton.alpha = 0.3
+      utilitiesButton.alpha = 0.3
+      incomeButton.alpha = 0.3
+      transportButton.alpha = 0.3
+      funButton.alpha = 0.3
     case .transport:
       transportButton.alpha = 1.0
-      groceriesButton.alpha = 0.5
-      utilitiesButton.alpha = 0.5
-      homeButton.alpha = 0.5
-      incomeButton.alpha = 0.5
-      funButton.alpha = 0.5
+      groceriesButton.alpha = 0.3
+      utilitiesButton.alpha = 0.3
+      homeButton.alpha = 0.3
+      incomeButton.alpha = 0.3
+      funButton.alpha = 0.3
     case .utilities:
       utilitiesButton.alpha = 1.0
-      groceriesButton.alpha = 0.5
-      incomeButton.alpha = 0.5
-      homeButton.alpha = 0.5
-      transportButton.alpha = 0.5
-      funButton.alpha = 0.5
+      groceriesButton.alpha = 0.3
+      incomeButton.alpha = 0.3
+      homeButton.alpha = 0.3
+      transportButton.alpha = 0.3
+      funButton.alpha = 0.3
     }
   }
 

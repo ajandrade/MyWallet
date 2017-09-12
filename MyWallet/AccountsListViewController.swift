@@ -24,9 +24,7 @@ class AccountsListViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    presenter.accountsChanged = { [weak self] _ in
-      self?.tableView.reloadData()
-    }
+    presenter.accountsChanged = { [weak self] _ in self?.tableView.reloadData() }
   }
   
   // MARK: - IBACTIONS
