@@ -9,6 +9,8 @@
 import Foundation
 
 protocol AccountDetailsPresenterRepresentable {
+  var didAddTransaction: (() -> Void)? { get set }
+
   var transactionsNumber: Int { get }
   var accountName: String { get }
   var accountBalance: String { get }
@@ -31,8 +33,8 @@ class AccountDetailsPresenter: AccountDetailsPresenterRepresentable {
   
   // MARK: - PRIVATE PROPERTIES
   
-  private let transactions: [Transaction]
-  private let transactionPresenters: [AccountDetailCellPresenterRepresentable]
+  private var transactions: [Transaction]
+  private var transactionPresenters: [AccountDetailCellPresenterRepresentable]
   
   // MARK: - OUTPUT PROPERTIES
   
@@ -74,7 +76,12 @@ class AccountDetailsPresenter: AccountDetailsPresenterRepresentable {
   
   func createTransaction() {
     let createTransactionPresenter = AddNewTransactionPresenter(navigator: navigator, persistanceService: persistanceService, account: account)
-    createTransactionPresenter.didFinishSaving = didAddTransaction
+    createTransactionPresenter.didFinishSaving = { [weak self] transaction in
+      self?.transactions.append(transaction)
+      let newTransactionPresenter = AccountDetailCellPresenter(transaction: transaction)
+      self?.transactionPresenters.append(newTransactionPresenter)
+      self?.didAddTransaction?()
+    }
     let createTransactionViewController = NavigationScene.newTransaction(createTransactionPresenter)
     navigator.transition(to: createTransactionViewController, type: .modal)
   }

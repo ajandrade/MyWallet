@@ -30,6 +30,7 @@ class AccountDetailsViewController: UIViewController {
     navigationBar.topItem?.title = presenter.accountName
     accountNumberLabel.text = presenter.accountNumber
     accountBalanceLabel.text = presenter.accountBalance
+    presenter.didAddTransaction = { [weak self] _ in self?.tableView.reloadData() }
   }
   
   // MARK: - IBACTIONS
