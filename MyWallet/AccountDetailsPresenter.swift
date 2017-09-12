@@ -29,7 +29,7 @@ class AccountDetailsPresenter: AccountDetailsPresenterRepresentable {
   
   private let navigator: NavigatorRepresentable
   private let persistanceService: PersistanceServiceRepresentable
-  private let account: Account
+  private var account: Account
   
   // MARK: - PRIVATE PROPERTIES
   
@@ -38,9 +38,9 @@ class AccountDetailsPresenter: AccountDetailsPresenterRepresentable {
   
   // MARK: - OUTPUT PROPERTIES
   
-  let accountName: String
-  let accountBalance: String
-  let accountNumber: String
+  var accountName: String
+  var accountBalance: String
+  var accountNumber: String
   
   var transactionsNumber: Int {
     return transactions.count
@@ -78,14 +78,22 @@ class AccountDetailsPresenter: AccountDetailsPresenterRepresentable {
   
   func createTransaction() {
     let createTransactionPresenter = AddNewTransactionPresenter(navigator: navigator, persistanceService: persistanceService, account: account)
-    createTransactionPresenter.didFinishSaving = { [weak self] transaction in
-      self?.transactions.append(transaction)
-      let newTransactionPresenter = AccountDetailCellPresenter(transaction: transaction)
-      self?.transactionPresenters.append(newTransactionPresenter)
-      self?.didAddTransaction?()
-    }
+    createTransactionPresenter.didFinishSaving = { [weak self] _ in self?.updateModel() }
     let createTransactionViewController = NavigationScene.newTransaction(createTransactionPresenter)
     navigator.transition(to: createTransactionViewController, type: .modal)
+  }
+  
+  // MARK: - METHODS
+  
+  private func updateModel() {
+    guard let updatedAccount = persistanceService.getAccount(with: account.number) else { return }
+    self.account = updatedAccount
+    accountName = updatedAccount.name
+    transactions = updatedAccount.transactions
+    accountBalance = "$ \(updatedAccount.balance)"
+    accountNumber = updatedAccount.number.accountNumberFormatting
+    transactionPresenters = transactions.map(AccountDetailCellPresenter.init(transaction:))
+    didAddTransaction?()
   }
   
 }
