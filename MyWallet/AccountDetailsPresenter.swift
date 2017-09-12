@@ -47,6 +47,7 @@ class AccountDetailsPresenter: AccountDetailsPresenterRepresentable {
   }
   
   var didAddTransaction: (() -> Void)?
+  var reloadData: (() -> Void)?
   
   // MARK: - INITIALIZER
   
@@ -71,6 +72,7 @@ class AccountDetailsPresenter: AccountDetailsPresenterRepresentable {
   // MARK: - NAVIGATION
   
   func dismiss() {
+    reloadData?()
     navigator.pop()
   }
   
