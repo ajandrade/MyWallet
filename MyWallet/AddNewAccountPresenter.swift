@@ -34,10 +34,8 @@ class AddNewAccountPresenter: AddNewAccountPresenterRepresentable {
   // MARK: - METHODS
   
   func save(accountName: String, bankName: String, accountNumber: String) {
-    var accounts = persistanceService.fetchAccounts()
     let newAccount = Account(name: accountName, bank: bankName, number: accountNumber, transactions: [])
-    accounts.append(newAccount)
-    persistanceService.save(accounts)
+    persistanceService.save(newAccount)
     didAddAccount?()
     dismiss()
   }

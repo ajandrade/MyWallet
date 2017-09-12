@@ -45,13 +45,8 @@ class AddNewTransactionPresenter: AddNewTransactionPresenterRepresentable {
   }
   
   func save(amount: String, description: String) {
-    var accounts = persistanceService.fetchAccounts().filter { $0.number != account.number }
     let transaction = Transaction(amount: Float(amount) ?? 0, description: description, date: Date(), category: transactionType)
-    var accountTransactions = account.transactions
-    accountTransactions.append(transaction)
-    let updatedAccount = Account(name: account.name, bank: account.bank, number: account.number, transactions: accountTransactions)
-    accounts.append(updatedAccount)
-    persistanceService.save(accounts)
+    persistanceService.update(account, with: transaction)
     didFinishSaving?(transaction)
     dismiss()
   }

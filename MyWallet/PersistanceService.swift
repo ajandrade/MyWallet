@@ -9,8 +9,10 @@
 import Foundation
 
 protocol PersistanceServiceRepresentable {
+  func save(_ account: Account)
   func save(_ items: [Account])
   func fetchAccounts() -> [Account]
+  func update(_ account: Account, with transaction: Transaction)
 }
 
 class PersistanceService {
@@ -57,4 +59,20 @@ extension PersistanceService: PersistanceServiceRepresentable {
     }
     return accountsPlist.map(Account.init(plist:)).sorted(by: { $0.name < $1.name })
   }
+  
+  func save(_ account: Account) {
+    var accounts = fetchAccounts()
+    accounts.append(account)
+    save(accounts)
+  }
+  
+  func update(_ account: Account, with transaction: Transaction) {
+    var accounts = fetchAccounts().filter { $0.number != account.number }
+    var accountTransactions = account.transactions
+    accountTransactions.append(transaction)
+    let updatedAccount = Account(name: account.name, bank: account.bank, number: account.number, transactions: accountTransactions)
+    accounts.append(updatedAccount)
+    save(accounts)
+  }
+  
 }
