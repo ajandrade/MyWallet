@@ -13,6 +13,7 @@ protocol PersistanceServiceRepresentable {
   func save(_ items: [Account])
   func fetchAccounts() -> [Account]
   func update(_ account: Account, with transaction: Transaction)
+  func getAccount(with number: String) -> Account?
 }
 
 class PersistanceService {
@@ -73,6 +74,10 @@ extension PersistanceService: PersistanceServiceRepresentable {
     let updatedAccount = Account(name: account.name, bank: account.bank, number: account.number, transactions: accountTransactions)
     accounts.append(updatedAccount)
     save(accounts)
+  }
+  
+  func getAccount(with number: String) -> Account? {
+    return fetchAccounts().filter { $0.number == number }.first
   }
   
 }
