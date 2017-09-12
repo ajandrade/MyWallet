@@ -499,6 +499,7 @@
 				E07366BC1F671CA100F587AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
