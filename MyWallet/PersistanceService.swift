@@ -55,6 +55,6 @@ extension PersistanceService: PersistanceServiceRepresentable {
     guard let accountsPlist = NSArray(contentsOf: accountsFileURL) as? [PlistData] else {
       return createFakeData()
     }
-    return accountsPlist.map(Account.init(plist:))
+    return accountsPlist.map(Account.init(plist:)).sorted(by: { $0.name < $1.name })
   }
 }
