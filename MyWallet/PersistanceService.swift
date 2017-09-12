@@ -32,11 +32,11 @@ class PersistanceService {
     let transportTransaction = Transaction(amount: 50, description: "Bus", date: Date(), category: .transport)
     let funTransaction = Transaction(amount: 21.44, description: "Bar", date: Date(), category: .fun)
     let accounts = [
-      Account(name: "Account Name", bank: "Bank Name", number: "01234567890123456789", transactions: [incomeTransaction, transportTransaction, funTransaction]),
-      Account(name: "Account Name", bank: "Bank Name", number: "01234567890123456789", transactions: [incomeTransaction, transportTransaction, funTransaction]),
-      Account(name: "Account Name", bank: "Bank Name", number: "01234567890123456789", transactions: [incomeTransaction, transportTransaction, funTransaction]),
-      Account(name: "Account Name", bank: "Bank Name", number: "01234567890123456789", transactions: [incomeTransaction, transportTransaction, funTransaction]),
-      Account(name: "Account Name", bank: "Bank Name", number: "01234567890123456789", transactions: [incomeTransaction, transportTransaction, funTransaction])
+      Account(name: "Account 1", bank: "Bank 1", number: "01234567890123456789", transactions: [incomeTransaction, transportTransaction, funTransaction]),
+      Account(name: "Account 2", bank: "Bank 2", number: "82748124718248124612", transactions: [incomeTransaction, transportTransaction, funTransaction]),
+      Account(name: "Account 3", bank: "Bank 3", number: "42942948294729475215", transactions: [incomeTransaction, transportTransaction, funTransaction]),
+      Account(name: "Account 4", bank: "Bank 4", number: "59175917259125912759", transactions: [incomeTransaction, transportTransaction, funTransaction]),
+      Account(name: "Account 5", bank: "Bank 5", number: "51581975817950464434", transactions: [incomeTransaction, transportTransaction, funTransaction])
     ]
     save(accounts)
     return accounts
